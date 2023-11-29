@@ -1,0 +1,1 @@
+export const BedroomSwitcher = ["Private Bathroom","Private Balcony","Furniture"]
