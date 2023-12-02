@@ -1,7 +1,7 @@
 export default function Home() {
   return (
    <>
-    <h2>Home page</h2>
+    <h2 className="font-roboto">Home page</h2>
    </>
   )
 }
