@@ -3,6 +3,8 @@ type Props = {}
 
 export default function TextInput({}: Props) {
   return (
-    <div>TextInput</div>
+    <div>
+      <input type="text" placeholder="type here"  />
+    </div>
   )
 }
