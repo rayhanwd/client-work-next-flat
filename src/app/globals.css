@@ -8,6 +8,28 @@
   --error: #f00;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+
+@layer components {
+  .fijb {
+    @apply flex items-center justify-between;
+  }
+  .fijc {
+    @apply flex items-center justify-center;
+  }
+  .fc {
+    @apply flex items-center;
+  }
+}
+
+@layer utilities {
+}
+
 * {
   margin: 0;
   padding: 0;

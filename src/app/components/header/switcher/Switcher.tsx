@@ -21,7 +21,7 @@ export default function Switcher() {
       />
       <label
         htmlFor="Green"
-        className={`flex items-center justify-between h-[29.995px] overflow-hidden rounded-full cursor-pointer duration-200 ease-in ${isChecked ? 'bg-blue-600':' bg-gray-300'}`}
+        className={`fijb h-[29.995px] overflow-hidden rounded-full cursor-pointer duration-200 ease-in ${isChecked ? 'bg-blue-600':' bg-gray-300'}`}
       >
         <span className={`block rounded-[24px] w-[24px] h-[24px] p-[4px] bg-white ${ isChecked ? 'ml-auto':'mr-auto'}`}>
           <SunIco />
