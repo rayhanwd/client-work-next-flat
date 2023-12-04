@@ -6,6 +6,58 @@
   --primary: #3c50e0;
   --input-valid: #e0e4ec;
   --error: #f00;
+  --shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2),
+    0px -1px 1px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px #fff inset;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+
+@layer components {
+  .fijb {
+    @apply flex items-center justify-between;
+  }
+  .fijc {
+    @apply flex items-center justify-center;
+  }
+  .fc {
+    @apply flex items-center;
+  }
+
+  .search-text {
+    @apply text-TailGrids-Text-Color font-inter font-medium text-sm leading-5;
+  }
+  .action-button {
+    @apply text-white text-center rounded-full font-inter font-medium text-base leading-6;
+  }
+  .field-label {
+    @apply text-[#868686] font-roboto text-[14px] font-light capitalize;
+  }
+  .field-style {
+    @apply ring-1 w-[357px] h-[55px]  ring-[#868686] rounded-[4px]  pt-[18px] pb-[18px] pl-[20px] text-[#868686] font-roboto text-base font-normal leading-normal capitalize border-transparent flex-1 appearance-none;
+  }
+
+  .phone-label {
+    @apply text-[#4C535F] font-manrope text-base font-medium;
+  }
+  .phone-field {
+    @apply w-[357.341px] h-[52px] rounded-lg border border-solid border-gray-300 bg-gradient-to-b from-white to-gray-50 text-[#8D98AA] font-manrope font-medium text-base leading-4 py-[18px] flex items-center;
+  }
+
+  .field-style-2 {
+    @apply w-[278px] h-[19px] py-[17px] overflow-hidden font-roboto text-base font-light capitalize text-[#868686];
+  }
+}
+
+/* In your custom CSS file or Tailwind configuration */
+@layer utilities {
+  .custom-shadow {
+    box-shadow: var(--shadow);
+  }
 }
 
 * {
@@ -32,7 +84,8 @@ button {
   cursor: pointer;
 }
 input,
-ul {
+ul,
+div {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

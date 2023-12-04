@@ -1,9 +1,13 @@
 import { useState, useEffect, ChangeEvent } from "react";
 import Image from "next/image";
+import ArrowDown from "@/app/icons/ArrowDown";
+import useToggle from "@/hooks/useToggle";
 
 const CountrySelect: React.FC = () => {
   const [countries, setCountries] = useState<any[]>([]);
   const [selectedCountry, setSelectedCountry] = useState<any | null>(null);
+
+  const [state, toggle] = useToggle(false);
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -51,35 +55,52 @@ const CountrySelect: React.FC = () => {
     getUserLocation();
   }, [countries]);
 
-  const handleSelectCountry = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleSelectCountry = (e: React.MouseEvent<HTMLLIElement>) => {
     const selected = countries.find(
-      (country) => country.name.common === e.target.value
+      (country) => country.name.common === e.currentTarget.dataset.value
     );
     setSelectedCountry(selected || null);
+    toggle();
   };
 
   return (
-    <div>
-      {selectedCountry ? (
-        <div>
-          <Image
-            src={selectedCountry.flags.png}
-            alt={selectedCountry.name}
-            width={20}
-            height={20}
-          />
-        </div>
-      ) : (
-        <select onChange={handleSelectCountry}>
-          
-          <option value="">Select a country</option>
+    <div className="relative inline-block text-left mr-[23.25px]">
+      <div className="relative">
+        {selectedCountry && (
+          <div>
+            <Image
+              src={selectedCountry.flags.png}
+              alt={selectedCountry.name.common}
+              width={43.643}
+              height={32.725}
+              className="rounded-full"
+            />
+          </div>
+        )}
+        <span className="absolute right-0 bottom-[-9.83px] bg-[#D9D9D9] rounded-full" onClick={toggle}>
+          <ArrowDown width={27.023} height={20.263} />
+        </span>
+      </div>
+      <div
+        className={`absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg  ${
+          state ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <ul className="py-1 h-[150px] overflow-hidden overflow-y-auto">
           {countries.map((country, index) => (
-            <option key={index} value={country.name.common}>
-              {country.name.common}
-            </option>
+            <li
+              className="block  px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
+              key={index}
+              onClick={handleSelectCountry}
+              data-value={country.name.common}
+            >
+              <span className="flex flex-col">
+                <span>{country.name.common}</span>
+              </span>
+            </li>
           ))}
-        </select>
-      )}
+        </ul>
+      </div>
     </div>
   );
 };

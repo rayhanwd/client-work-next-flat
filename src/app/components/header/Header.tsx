@@ -13,12 +13,12 @@ type Props = {
 
 export default function Header({ v }: Props) {
   return (
-    <header className="flex justify-between items-center">
+    <header className="fijb">
       <div className="flex">
         <Logo />
         <SearchField />
       </div>
-      <div className="flex">
+      <div className="fc">
         <Switcher />
         <CountrySelect />
         <AlarmIcon />

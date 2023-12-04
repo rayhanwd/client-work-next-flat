@@ -5,7 +5,7 @@ export default function SearchField() {
     <div className="flex items-center ml-[107.63px]">
       <Search2 />
       <div className="w-[313.469px] ml-[28.24px]">
-        <input type="text" placeholder="Type to search a localisation..." className="w-full"/>
+        <input type="text" placeholder="Type to search a localisation..." className="w-full search-text"/>
       </div>
     </div>
   );
