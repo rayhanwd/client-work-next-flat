@@ -1,10 +1,11 @@
-
-type Props = {}
+type Props = {};
 
 export default function ActionButton({}: Props) {
   return (
-    <div>
-      <button>Log in / Sign up</button>
+    <div className="ml-[39.75px]">
+      <button className="bg-primary action-button px-[40px] py-[14px]">
+        Log in / Sign up
+      </button>
     </div>
-  )
+  );
 }

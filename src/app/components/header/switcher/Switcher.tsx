@@ -5,13 +5,13 @@ export default function Switcher() {
   
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleCheckboxChange = (event) => {
+  const handleCheckboxChange = (event:any) => {
     setIsChecked(event.target.checked);
     console.log("Checkbox checked value:", event.target.checked);
   };
 
   return (
-    <div className="relative inline-block w-[77.283px] mr-2 align-middle select-none">
+    <div className="relative inline-block w-[77.283px] mr-[26.76px] align-middle select-none">
       <input
         type="checkbox"
         name="toggle"
@@ -23,7 +23,7 @@ export default function Switcher() {
         htmlFor="Green"
         className={`fijb h-[29.995px] overflow-hidden rounded-full cursor-pointer duration-200 ease-in ${isChecked ? 'bg-blue-600':' bg-gray-300'}`}
       >
-        <span className={`block rounded-[24px] w-[24px] h-[24px] p-[4px] bg-white ${ isChecked ? 'ml-auto':'mr-auto'}`}>
+        <span className={`block rounded-[24px] w-[24px] h-[24px] p-[4px] bg-white  custom-shadow ${ isChecked ? 'ml-auto':'mr-auto'}`}>
           <SunIco />
         </span>
       </label>

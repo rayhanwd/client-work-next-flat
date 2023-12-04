@@ -18,7 +18,7 @@ export default function Header({ v }: Props) {
         <Logo />
         <SearchField />
       </div>
-      <div className="flex">
+      <div className="fc">
         <Switcher />
         <CountrySelect />
         <AlarmIcon />

@@ -6,9 +6,10 @@ import XIcon from "@/app/icons/XIcon";
 import Image from "next/image";
 
 const details = () => {
+
     return (
         <>
-            <div className=" grid grid-cols-2 justify-between gap-2 mt-[30px]">
+            <div className="grid grid-cols-2 justify-between gap-2 mt-[30px]">
                 <div className="ml-[53px]">
                     <h1 className=" font-inter text-2xl font-medium">Flat</h1>
                     <div className="flex justify-end gap-3">
