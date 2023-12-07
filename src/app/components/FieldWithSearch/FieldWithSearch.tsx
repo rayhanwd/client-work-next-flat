@@ -11,19 +11,26 @@ interface Props {
   placeholder?: string;
 }
 
-export default function FieldWithSearch() {
+export default function FieldWithSearch({
+  onChange,
+  onBlur,
+  name,
+  label,
+  type,
+  placeholder,
+}: Props) {
   return (
     <div className="fc w-[345px] px-[16px] gap-[6px] rounded-[4px] ring-1 ring-[#868686]">
       <span>
         <Search2 />
       </span>
       <input
-        type={"type"}
+        type={type}
         className="field-style-2"
-        name={"name"}
-        placeholder={"Country*"}
-        // onChange={onChange}
-        // onBlur={onBlur}
+        name={name}
+        placeholder={placeholder}
+        onChange={onChange}
+        onBlur={onBlur}
       />
       <span>
         <ArrowDown width={20} height={55} />

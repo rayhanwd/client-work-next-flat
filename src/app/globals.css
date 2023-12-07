@@ -51,6 +51,12 @@
   .field-style-2 {
     @apply w-[278px] h-[19px] py-[17px] overflow-hidden font-roboto text-base font-light capitalize text-[#868686];
   }
+  .local-title{
+    @apply text-black font-inter text-[32px] font-medium;
+  }
+  .local-caption{
+    @apply text-[#868686] font-roboto text-base font-light capitalize;
+  }
 }
 
 /* In your custom CSS file or Tailwind configuration */
