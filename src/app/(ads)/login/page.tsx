@@ -25,8 +25,8 @@ const page = () => {
 
                             <input type="email" className=" login-field"
                                 placeholder={`email address`} />
-                            <input type="email" className=" login-field my-4"
-                                placeholder={`email address`} />
+                            <input type="password" className=" login-field my-4"
+                                placeholder={`password`} />
 
                             <div className="flex justify-between">
                                 <div className="flex">
