@@ -57,6 +57,10 @@
   .local-caption{
     @apply text-[#868686] font-roboto text-base font-light capitalize;
   }
+
+  .login-field {
+    @apply px-2 pt-[13px] pb-[11px] border border-zinc-900 border-opacity-50 justify-start items-center w-96 h-[60px] focus:border focus:border-zinc-900 focus:border-opacity-50 rounded-lg
+  }
 }
 
 /* In your custom CSS file or Tailwind configuration */
@@ -82,9 +86,10 @@ body {
 
 button,
 input {
-  outline: none;
+  /* outline: none;
   border: none;
-  background: none;
+  background: none; */
+  /* all: unset; */
 }
 button {
   cursor: pointer;
