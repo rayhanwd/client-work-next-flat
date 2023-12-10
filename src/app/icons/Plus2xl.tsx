@@ -6,7 +6,7 @@ export default function Plus2xl() {
       width="105"
       height="104"
       viewBox="0 0 105 104"
-      fill="none"
+      fill="black"
       xmlns="http://www.w3.org/2000/svg"
     >
       {" "}

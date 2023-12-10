@@ -2,11 +2,11 @@ import FIeldWithLabel from "@/app/components/FIeldWithLabel/FIeldWithLabel";
 import type { Metadata } from "next";
 import PhoneNumber from "./components/PhoneNumber";
 import FieldWithSearch from "@/app/components/FieldWithSearch/FieldWithSearch";
-import Image from "next/image";
 import PenIcon from "@/app/icons/PenIcon";
 import Checkbox from "./components/CheckBox";
 import SpaceDivider from "./components/SpaceDivider";
 import BiggerPlus from "@/app/icons/Plus2xl";
+import FieldWithLabel2 from "@/app/components/FIeldWithLabel/FieldWithLabel2";
 
 export const metadata: Metadata = {
   title: "Next flat | create a new ad",
@@ -111,14 +111,34 @@ export default function CreateAnads() {
       {/* basic information */}
       <section>
         <div className="container mx-auto">
-          <div className="fc">
+          <div className="basic__container">
             {/* field container */}
-            <div className="">
-              <h1>Basics information</h1>
+            <div className="field__container">
+              <div className="basic_info_top">
+                <h1 className="basic_title">Basics information</h1>
+                <div>
+                  <FieldWithLabel2 />
+                </div>
+              </div>
             </div>
             {/* image container */}
-            <div className="">
-              <BiggerPlus />
+            <div className="location__container">
+              <img src="/building_photo2.png" alt="" srcset="" />
+              <img src="/building_photo.png" alt="" srcset="" />
+              <div className="add__new">
+                <BiggerPlus />
+              </div>
+              <div>
+                <div className="add__new">
+                  <BiggerPlus />
+                </div>
+                <div className="add__new">
+                  <BiggerPlus />
+                </div>{" "}
+                <div className="add__new">
+                  <BiggerPlus />
+                </div>
+              </div>
             </div>
           </div>
         </div>
