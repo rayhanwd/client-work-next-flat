@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap");
 
 :root {
   --primary: #3c50e0;
@@ -8,6 +10,9 @@
   --error: #f00;
   --shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2),
     0px -1px 1px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 2px 0px #fff inset;
+  --color-black: #000;
+  --font-roboto: "Roboto", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
 @tailwind base;
@@ -51,15 +56,15 @@
   .field-style-2 {
     @apply w-[278px] h-[19px] py-[17px] overflow-hidden font-roboto text-base font-light capitalize text-[#868686];
   }
-  .local-title{
+  .local-title {
     @apply text-black font-inter text-[32px] font-medium;
   }
-  .local-caption{
+  .local-caption {
     @apply text-[#868686] font-roboto text-base font-light capitalize;
   }
 
   .login-field {
-    @apply px-2 pt-[13px] pb-[11px] border border-zinc-900 border-opacity-50 justify-start items-center w-96 h-[60px] focus:border focus:border-zinc-900 focus:border-opacity-50 rounded-lg
+    @apply px-2 pt-[13px] pb-[11px] border border-zinc-900 border-opacity-50 justify-start items-center w-96 h-[60px] focus:border focus:border-zinc-900 focus:border-opacity-50 rounded-lg;
   }
 }
 
@@ -86,10 +91,9 @@ body {
 
 button,
 input {
-  /* outline: none;
+  outline: none;
   border: none;
-  background: none; */
-  /* all: unset; */
+  background: none;
 }
 button {
   cursor: pointer;
@@ -107,4 +111,96 @@ li {
 }
 a {
   text-decoration: none;
+}
+
+/* basic information */
+
+.basic__container,
+.field__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.basic_info_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.basic_title {
+  color: var(color-black);
+  font-family: var(--font-inter);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.basicInfoField {
+  position: relative;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #868686;
+}
+.basicInfoField > label {
+  color: #868686;
+  font-family: var(--font-roboto);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: capitalize;
+  position: absolute;
+  top: -10px;
+  background-color: #fff;
+}
+
+.basicInfoField .fieldWithIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.fieldWithIcon input {
+  color: #868686;
+  font-family: var(--font-roboto);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.fieldWithIcon span {
+  padding-left: 23.43px;
+  padding-right: 9.43px;
+}
+
+/* location container */
+
+.add__new {
+  width: 281px;
+  height: 150.134px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* responsive */
+
+@media(min-width:1920px){
+.field__container{
+  
+}
+.location__container{
+
+}
+}
+
+@media(min-width:1376px){
+  
 }
