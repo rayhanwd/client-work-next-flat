@@ -8,6 +8,7 @@ import SalesIcon from "@/app/icons/SalesIcon";
 import SheduleIcon from "@/app/icons/SheduleIcon";
 import SurfaceIcon from "@/app/icons/SurfaceIcon";
 import Image from "next/image";
+import Link from "next/link";
 
 const Sidebar = () => {
   return (
@@ -36,58 +37,58 @@ const Sidebar = () => {
 
 
           <li className="nav-item">
-            <a className="nav-link collapsed" href="users-profile.html">
+            <Link className="nav-link collapsed" href="/">
               <HomeIcon />
               <span className="nav-text">Proterty Type</span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link collapsed" href="pages-faq.html">
+            <Link className="nav-link collapsed" href="/">
               <SurfaceIcon />
               <span className="nav-text">Surface</span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link collapsed" href="pages-contact.html">
+            <Link className="nav-link collapsed" href="/">
               <RoomIcon />
               <span className="nav-text">Room / Bedroom</span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link collapsed" href="pages-register.html">
+            <Link className="nav-link collapsed" href="/">
               <ProductIcon />
               <span className="nav-text">Products</span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link collapsed" href="pages-login.html">
+            <Link className="nav-link collapsed" href="/">
               <AnalysisIcon />
               <span className="nav-text">Analytics</span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link collapsed" href="pages-error-404.html">
+            <Link className="nav-link collapsed" href="/">
               <SheduleIcon />
               <span className="nav-text">Schedules</span>
-            </a>
+            </Link>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link collapsed" href="pages-blank.html">
+            <Link className="nav-link collapsed" href="/">
               <HistoryIcon />
               <span className="nav-text">History</span>
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link collapsed" href="pages-blank.html">
+            <Link className="nav-link collapsed" href="/">
               <SalesIcon />
               <span className="nav-text">Sales</span>
-            </a>
+            </Link>
           </li>
 
         </ul>
